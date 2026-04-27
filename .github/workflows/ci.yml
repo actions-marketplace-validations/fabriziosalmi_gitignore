@@ -72,7 +72,9 @@ jobs:
             --templates data/templates \
             --rules-table data/rules_table.json \
             --n-trees 1000 \
-            --paths-per-tree 200
+            --paths-per-tree 200 \
+            --max-fingerprint-p99-ms 10.0 \
+            --max-generate-p99-ms 2.0
         working-directory: occam-gitignore
 
   sbom:

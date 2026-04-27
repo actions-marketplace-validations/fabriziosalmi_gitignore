@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Conformance runner — Python reference implementation.
 
 Replays every case under ``conformance/cases/`` against the pinned

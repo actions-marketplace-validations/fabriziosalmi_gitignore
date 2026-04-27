@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Ports (interfaces). Adapters live elsewhere; core depends only on these."""
 
 from __future__ import annotations

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """occam-gitignore-cli: thin Typer adapter over occam-gitignore-core."""
 
 from .app import app

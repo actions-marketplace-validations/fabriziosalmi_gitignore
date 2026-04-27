@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """CLI entry point: occam-gitignore-mcp."""
 
 from __future__ import annotations

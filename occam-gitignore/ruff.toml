@@ -19,6 +19,8 @@ ignore = [
 "**/__main__.py" = ["T201"]
 # Typer requires call-in-default sentinels.
 "**/occam_gitignore_cli/app.py" = ["B008"]
+# Hatch build hook is loaded by hatchling outside the package tree.
+"packages/occam-gitignore-cli/hatch_build.py" = ["INP001"]
 
 [lint.pydocstyle]
 convention = "google"

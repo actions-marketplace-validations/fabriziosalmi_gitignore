@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Typer application. Keeps wiring (composition root) here, logic in core."""
 
 from __future__ import annotations

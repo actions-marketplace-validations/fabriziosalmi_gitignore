@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Run the conformance suite as a pytest case.
 
 Equivalent to ``python conformance/run_conformance.py`` but integrated

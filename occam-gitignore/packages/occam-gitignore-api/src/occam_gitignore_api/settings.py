@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Server settings (composition root inputs)."""
 
 from __future__ import annotations

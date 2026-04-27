@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """FastAPI app builder. Pure composition; no global state."""
 
 from __future__ import annotations

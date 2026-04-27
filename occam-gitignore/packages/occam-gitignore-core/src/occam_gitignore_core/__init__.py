@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """occam-gitignore-core: pure, deterministic core.
 
 No I/O, no time, no randomness. All public types are immutable.

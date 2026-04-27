@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Hatch build hook: copy data/ assets into the package source tree.
 
 Runs before wheel/sdist materialization. Resolves the data directory by
@@ -11,7 +12,6 @@ from __future__ import annotations
 
 import shutil
 from pathlib import Path
-from typing import Any
 
 from hatchling.builders.hooks.plugin.interface import BuildHookInterface
 
@@ -19,7 +19,7 @@ from hatchling.builders.hooks.plugin.interface import BuildHookInterface
 class CustomBuildHook(BuildHookInterface):  # type: ignore[misc]
     PLUGIN_NAME = "custom"
 
-    def initialize(self, version: str, build_data: dict[str, Any]) -> None:
+    def initialize(self, version: str, build_data: dict[str, object]) -> None:
         del version, build_data  # unused
         root = Path(self.root)
         candidates = (

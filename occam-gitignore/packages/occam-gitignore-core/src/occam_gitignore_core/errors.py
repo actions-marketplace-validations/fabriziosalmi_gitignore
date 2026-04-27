@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Typed exception hierarchy. No bare excepts allowed downstream."""
 
 from __future__ import annotations

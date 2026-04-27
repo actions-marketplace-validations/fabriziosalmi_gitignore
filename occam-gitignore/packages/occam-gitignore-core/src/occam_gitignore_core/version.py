@@ -1,1 +1,2 @@
-CORE_VERSION = "0.1.2"
+# SPDX-License-Identifier: MIT
+CORE_VERSION = "0.1.3"

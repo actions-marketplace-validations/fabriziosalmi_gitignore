@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Adapters implementing `TemplateRepository`."""
 
 from __future__ import annotations

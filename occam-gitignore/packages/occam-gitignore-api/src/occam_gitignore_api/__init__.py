@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """occam-gitignore-api: thin FastAPI adapter over occam-gitignore-core."""
 
 from .app import build_app

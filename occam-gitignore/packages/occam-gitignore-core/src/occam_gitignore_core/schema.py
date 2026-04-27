@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Immutable value objects. Make illegal states unrepresentable."""
 
 from __future__ import annotations

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Property-based tests: prove the determinism contract on random inputs.
 
 Invariants asserted (each ``@given`` runs hundreds of cases):

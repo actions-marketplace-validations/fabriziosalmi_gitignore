@@ -1,12 +1,12 @@
 {
-  "content_hash": "sha256:d1316a105bd1f83e46710b67e1670aba2dfdd08ab8bd99240f41ce428346df85",
-  "core_version": "0.1.2",
+  "content_hash": "sha256:2235787d0a7b6c6fc9c3603246ab457182da6d6a911ff7a7a510a0941803a968",
+  "core_version": "0.1.3",
   "features": [
     "common",
     "jupyter",
     "python"
   ],
-  "provenance_hash": "sha256:ee68b7f5a6e16dc4691388cddd5fdba298d482c903c9bfb105eb18832c86f57e",
+  "provenance_hash": "sha256:320fbe635f667d9f9ebcb91f4721f31ca852294ad300548193fd80b21597170a",
   "rules_table_version": "sha256:72fd0c323cc1",
   "templates_version": "sha256:2b4ad54ce9b4"
 }

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Strategy registry of detectors. Add a `Detector` to extend without core changes."""
 
 from __future__ import annotations

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 # ruff: noqa: INP001 - intentional script directory, not a package.
 """Deterministic conformance case generator.
 

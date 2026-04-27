@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """CLI: parse logs -> JSONL; mine JSONL -> rules_table.json."""
 
 from __future__ import annotations

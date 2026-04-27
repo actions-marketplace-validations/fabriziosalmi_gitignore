@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """occam-gitignore-mcp: MCP server adapter over occam-gitignore-core."""
 
 from .server import build_server

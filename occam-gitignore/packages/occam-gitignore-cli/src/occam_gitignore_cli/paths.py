@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Resolution of bundled data assets (templates, rules table)."""
 
 from __future__ import annotations

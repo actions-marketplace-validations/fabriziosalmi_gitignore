@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """CLI: occam-gitignore-bench run <corpus>."""
 
 from __future__ import annotations

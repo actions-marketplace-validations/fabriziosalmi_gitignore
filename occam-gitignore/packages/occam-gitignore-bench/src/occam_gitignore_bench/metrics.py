@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Metrics: precision/recall/F1, stability, latency."""
 
 from __future__ import annotations

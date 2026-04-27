@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """MCP server: tools + resources over occam-gitignore-core.
 
 Tools (verbs):

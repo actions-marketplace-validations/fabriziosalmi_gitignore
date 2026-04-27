@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Repository scanning utilities. Kept here, out of the pure core."""
 
 from __future__ import annotations

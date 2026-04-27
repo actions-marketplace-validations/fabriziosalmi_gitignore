@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Smoke tests for the bench CLI (run + perf subcommands)."""
 
 from __future__ import annotations

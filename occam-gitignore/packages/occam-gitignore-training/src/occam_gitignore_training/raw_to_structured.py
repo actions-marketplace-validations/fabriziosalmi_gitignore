@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Parse conversational Gemini-CLI logs into structured records.
 
 Robust enough for the v0 corpus. Side-effect free (returns values; caller writes I/O).

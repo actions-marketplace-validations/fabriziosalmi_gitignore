@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """occam-gitignore-training: offline pipelines.
 
 Two stages:

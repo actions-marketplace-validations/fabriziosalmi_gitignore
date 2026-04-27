@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Mine a deterministic rules table from structured JSONL records.
 
 v0 strategy (transparent, reproducible):

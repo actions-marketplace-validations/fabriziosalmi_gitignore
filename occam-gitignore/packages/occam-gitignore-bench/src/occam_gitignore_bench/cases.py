@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Bench case loader. Cases live as JSON files in a corpus directory."""
 
 from __future__ import annotations

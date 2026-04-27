@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """occam-gitignore-bench: reproducible benchmarks.
 
 A "benchmark case" is a fixture: a tree of file paths + a ground-truth set

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Pure generation function. Stable output, hash-verifiable."""
 
 from __future__ import annotations

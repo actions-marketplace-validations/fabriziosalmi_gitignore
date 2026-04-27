@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 """Adapter implementing `RulesTable` from a JSON payload."""
 
 from __future__ import annotations

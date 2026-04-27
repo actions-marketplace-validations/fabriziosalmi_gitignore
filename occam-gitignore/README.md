@@ -67,7 +67,7 @@ uv run occam-gitignore-bench run bench/corpus \
 | Adapter | Entry point | Purpose |
 |---|---|---|
 | CLI    | `occam-gitignore generate <path>`     | Local generation |
-| Action | `uses: fabriziosalmi/gitignore@v0.1.2`| CI drift check / auto-fix |
+| Action | `uses: fabriziosalmi/gitignore@v0.1.3`| CI drift check / auto-fix |
 | API    | `uvicorn occam_gitignore_api.app:app` | HTTP, hash in `ETag` |
 | MCP    | `occam-gitignore-mcp`                 | LLM-callable tool surface |
 | Bench  | `occam-gitignore-bench run`           | Quality + latency gates |
@@ -83,7 +83,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: fabriziosalmi/gitignore@v0.1.2
+      - uses: fabriziosalmi/gitignore@v0.1.3
         with:
           path: '.'
           mode: 'check'   # or 'fix' to rewrite the file in place
@@ -91,7 +91,7 @@ jobs:
 
 Inputs: `path` (default `.`), `mode` (`check`|`fix`, default `check`),
 `python-version` (default `3.12`), `version` (PEP 440 specifier, default
-`>=0.1.2,<0.2`). Outputs: `drift` (`true`|`false`), `output-hash`
+`>=0.1.3,<0.2`). Outputs: `drift` (`true`|`false`), `output-hash`
 (`sha256:<digest>`).
 
 ## Documentation

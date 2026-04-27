@@ -14,7 +14,7 @@ Liveness probe. Always returns `200 OK`.
 
 ```json
 {
-  "core_version": "0.0.1",
+  "core_version": "0.1.3",
   "rules_table_version": "sha256:72fd0c323cc1"
 }
 ```

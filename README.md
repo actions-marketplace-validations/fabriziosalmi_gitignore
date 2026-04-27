@@ -1,6 +1,6 @@
 # occam-gitignore
 
-> Generate the perfect `.gitignore` for any repo — **deterministic**, **fast**, **provable**.
+> Generate the canonical `.gitignore` for any repo — **deterministic**, **fast**, **hash-verifiable**.
 
 [![PyPI](https://img.shields.io/pypi/v/occam-gitignore.svg)](https://pypi.org/project/occam-gitignore/)
 [![CI](https://github.com/fabriziosalmi/gitignore/actions/workflows/ci.yml/badge.svg)](https://github.com/fabriziosalmi/gitignore/actions/workflows/ci.yml)
@@ -45,7 +45,7 @@ Verify the install:
 
 ```bash
 occam-gitignore version
-# core=0.1.2 rules_table=sha256:72fd0c323cc1
+# core=0.1.3 rules_table=sha256:72fd0c323cc1
 ```
 
 ---
@@ -95,7 +95,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: fabriziosalmi/gitignore@v0.1.2
+      - uses: fabriziosalmi/gitignore@v0.1.3
         with:
           path: '.'
           mode: 'check'   # fail the build if .gitignore is out of sync
@@ -109,7 +109,7 @@ common "auto-commit" actions.
 | `path`           | `.`              | Repo path to scan.                           |
 | `mode`           | `check`          | `check` fails on drift; `fix` rewrites file. |
 | `python-version` | `3.12`           | Python used to install the CLI.              |
-| `version`        | `>=0.1.2,<0.2`   | PEP 440 spec for the CLI package.            |
+| `version`        | `>=0.1.3,<0.2`   | PEP 440 spec for the CLI package.            |
 
 | Output         | Description                                          |
 | -------------- | ---------------------------------------------------- |

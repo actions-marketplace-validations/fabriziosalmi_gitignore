@@ -73,7 +73,7 @@ uv run occam-gitignore-bench run bench/corpus \
 You should see something like:
 
 ```
-core=0.0.1 rules_table=sha256:72fd0c323cc1 cases=7
+core=0.1.3 rules_table=sha256:72fd0c323cc1 cases=7
 macro: P=0.443 R=1.000 F1=0.608
 micro: P=0.425 R=1.000 F1=0.597
 stability=1.000 latency p50=0.047ms p99=0.119ms

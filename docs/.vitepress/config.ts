@@ -27,9 +27,10 @@ export default defineConfig({
       { text: 'Reference', link: '/reference/core', activeMatch: '/reference/' },
       { text: 'Benchmark', link: '/guide/benchmark' },
       {
-        text: 'v0.0.1',
+        text: 'v0.1.3',
         items: [
-          { text: 'Changelog', link: 'https://github.com/fabriziosalmi/gitignore/releases' },
+          { text: 'Changelog', link: 'https://github.com/fabriziosalmi/gitignore/blob/main/CHANGELOG.md' },
+          { text: 'Releases', link: 'https://github.com/fabriziosalmi/gitignore/releases' },
           { text: 'Contributing', link: '/guide/contributing' },
         ],
       },

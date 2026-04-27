@@ -1,6 +1,6 @@
 [project]
 name = "occam-gitignore-training"
-version = "0.0.1"
+version = "0.1.0"
 description = "Offline training pipelines for occam-gitignore (raw logs -> rules table)."
 requires-python = ">=3.11"
 license = { text = "MIT" }

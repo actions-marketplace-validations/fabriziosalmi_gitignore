@@ -11,10 +11,10 @@ members = [
     "occam-gitignore",
     "occam-gitignore-api",
     "occam-gitignore-bench",
-    "occam-gitignore-cli",
     "occam-gitignore-core",
     "occam-gitignore-mcp",
     "occam-gitignore-training",
+    "occam-gitignore-workspace",
 ]
 
 [[package]]
@@ -619,48 +619,22 @@ wheels = [
 
 [[package]]
 name = "occam-gitignore"
-version = "0.0.1"
-source = { virtual = "." }
-
-[package.dev-dependencies]
-dev = [
-    { name = "anyio" },
-    { name = "httpx" },
-    { name = "hypothesis" },
-    { name = "mypy" },
-    { name = "occam-gitignore-api" },
-    { name = "occam-gitignore-bench" },
-    { name = "occam-gitignore-cli" },
+version = "0.1.0"
+source = { editable = "packages/occam-gitignore-cli" }
+dependencies = [
     { name = "occam-gitignore-core" },
-    { name = "occam-gitignore-mcp" },
-    { name = "occam-gitignore-training" },
-    { name = "pytest" },
-    { name = "pytest-cov" },
-    { name = "ruff" },
+    { name = "typer" },
 ]
 
 [package.metadata]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "anyio", specifier = ">=4" },
-    { name = "httpx", specifier = ">=0.27" },
-    { name = "hypothesis", specifier = ">=6.115" },
-    { name = "mypy", specifier = ">=1.11" },
-    { name = "occam-gitignore-api", editable = "packages/occam-gitignore-api" },
-    { name = "occam-gitignore-bench", editable = "packages/occam-gitignore-bench" },
-    { name = "occam-gitignore-cli", editable = "packages/occam-gitignore-cli" },
+requires-dist = [
     { name = "occam-gitignore-core", editable = "packages/occam-gitignore-core" },
-    { name = "occam-gitignore-mcp", editable = "packages/occam-gitignore-mcp" },
-    { name = "occam-gitignore-training", editable = "packages/occam-gitignore-training" },
-    { name = "pytest", specifier = ">=8" },
-    { name = "pytest-cov", specifier = ">=5" },
-    { name = "ruff", specifier = ">=0.6" },
+    { name = "typer", specifier = ">=0.12" },
 ]
 
 [[package]]
 name = "occam-gitignore-api"
-version = "0.0.1"
+version = "0.1.0"
 source = { editable = "packages/occam-gitignore-api" }
 dependencies = [
     { name = "fastapi" },
@@ -679,7 +653,7 @@ requires-dist = [
 
 [[package]]
 name = "occam-gitignore-bench"
-version = "0.0.1"
+version = "0.1.0"
 source = { editable = "packages/occam-gitignore-bench" }
 dependencies = [
     { name = "occam-gitignore-core" },
@@ -689,28 +663,13 @@ dependencies = [
 requires-dist = [{ name = "occam-gitignore-core", editable = "packages/occam-gitignore-core" }]
 
 [[package]]
-name = "occam-gitignore-cli"
-version = "0.0.1"
-source = { editable = "packages/occam-gitignore-cli" }
-dependencies = [
-    { name = "occam-gitignore-core" },
-    { name = "typer" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "occam-gitignore-core", editable = "packages/occam-gitignore-core" },
-    { name = "typer", specifier = ">=0.12" },
-]
-
-[[package]]
 name = "occam-gitignore-core"
-version = "0.0.1"
+version = "0.1.0"
 source = { editable = "packages/occam-gitignore-core" }
 
 [[package]]
 name = "occam-gitignore-mcp"
-version = "0.0.1"
+version = "0.1.0"
 source = { editable = "packages/occam-gitignore-mcp" }
 dependencies = [
     { name = "mcp" },
@@ -725,7 +684,7 @@ requires-dist = [
 
 [[package]]
 name = "occam-gitignore-training"
-version = "0.0.1"
+version = "0.1.0"
 source = { editable = "packages/occam-gitignore-training" }
 dependencies = [
     { name = "occam-gitignore-core" },
@@ -733,6 +692,47 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [{ name = "occam-gitignore-core", editable = "packages/occam-gitignore-core" }]
+
+[[package]]
+name = "occam-gitignore-workspace"
+version = "0.1.0"
+source = { virtual = "." }
+
+[package.dev-dependencies]
+dev = [
+    { name = "anyio" },
+    { name = "httpx" },
+    { name = "hypothesis" },
+    { name = "mypy" },
+    { name = "occam-gitignore" },
+    { name = "occam-gitignore-api" },
+    { name = "occam-gitignore-bench" },
+    { name = "occam-gitignore-core" },
+    { name = "occam-gitignore-mcp" },
+    { name = "occam-gitignore-training" },
+    { name = "pytest" },
+    { name = "pytest-cov" },
+    { name = "ruff" },
+]
+
+[package.metadata]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "anyio", specifier = ">=4" },
+    { name = "httpx", specifier = ">=0.27" },
+    { name = "hypothesis", specifier = ">=6.115" },
+    { name = "mypy", specifier = ">=1.11" },
+    { name = "occam-gitignore", editable = "packages/occam-gitignore-cli" },
+    { name = "occam-gitignore-api", editable = "packages/occam-gitignore-api" },
+    { name = "occam-gitignore-bench", editable = "packages/occam-gitignore-bench" },
+    { name = "occam-gitignore-core", editable = "packages/occam-gitignore-core" },
+    { name = "occam-gitignore-mcp", editable = "packages/occam-gitignore-mcp" },
+    { name = "occam-gitignore-training", editable = "packages/occam-gitignore-training" },
+    { name = "pytest", specifier = ">=8" },
+    { name = "pytest-cov", specifier = ">=5" },
+    { name = "ruff", specifier = ">=0.6" },
+]
 
 [[package]]
 name = "packaging"

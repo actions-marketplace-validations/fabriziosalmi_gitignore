@@ -1,10 +1,27 @@
 [project]
 name = "occam-gitignore-core"
-version = "0.0.1"
+version = "0.1.0"
 description = "Pure, deterministic core for occam-gitignore."
+readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
+authors = [{ name = "Fabrizio Salmi" }]
+keywords = ["gitignore", "deterministic", "content-addressed"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
 dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/fabriziosalmi/gitignore"
+Repository = "https://github.com/fabriziosalmi/gitignore"
 
 [build-system]
 requires = ["hatchling"]

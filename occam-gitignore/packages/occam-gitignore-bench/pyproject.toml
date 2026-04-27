@@ -1,6 +1,6 @@
 [project]
 name = "occam-gitignore-bench"
-version = "0.0.1"
+version = "0.1.0"
 description = "Reproducible benchmarks for occam-gitignore."
 requires-python = ">=3.11"
 license = { text = "MIT" }

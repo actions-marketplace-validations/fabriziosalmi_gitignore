@@ -40,13 +40,30 @@ jobs:
         working-directory: occam-gitignore
 
       - name: Build all packages
-        # Hatch-built wheels + sdists for every workspace member.
+        # Build every workspace member by directory path so the loop
+        # is independent of [project].name (which may differ from the
+        # directory name, e.g. occam-gitignore-cli/ → occam-gitignore).
         run: |
           mkdir -p dist
           for pkg in packages/*/; do
-            uv build --package "$(basename "$pkg")" --out-dir "$GITHUB_WORKSPACE/dist"
+            uv build "$pkg" --out-dir "$GITHUB_WORKSPACE/dist"
           done
         working-directory: occam-gitignore
+
+      - name: Build PyPI subset (only public packages)
+        # core + CLI go to PyPI; api/mcp/training/bench stay internal.
+        run: |
+          mkdir -p dist-publish
+          uv build packages/occam-gitignore-core --out-dir "$GITHUB_WORKSPACE/dist-publish"
+          uv build packages/occam-gitignore-cli  --out-dir "$GITHUB_WORKSPACE/dist-publish"
+        working-directory: occam-gitignore
+
+      - name: Upload PyPI dist
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-publish
+          path: dist-publish/
+          if-no-files-found: error
 
       - name: Compute artifact digests (for SLSA subject)
         id: hash
@@ -150,3 +167,27 @@ jobs:
             sbom/*
           generate_release_notes: true
           fail_on_unmatched_files: true
+
+  publish-pypi:
+    name: Publish to PyPI (trusted publisher / OIDC)
+    needs: [build, attest]
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: pypi
+      url: https://pypi.org/p/occam-gitignore
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Download PyPI dist
+        uses: actions/download-artifact@v4
+        with:
+          name: dist-publish
+          path: dist
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: dist
+          attestations: true
